@@ -12,10 +12,12 @@ public class HelloResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-          .when().get("/hello-forum")
-          .then()
-             .statusCode(200)
-             .body(is("hello"));
+                .when().get("/hello-forum")
+                .then()
+                .statusCode(200);
+        /* commented out because response can wary during demos
+                     .body(is("hello"));
+         */
     }
 
 }
