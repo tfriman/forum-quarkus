@@ -1,5 +1,8 @@
 package org.acme.quarkus.sample;
 
+import org.eclipse.microprofile.metrics.MetricUnits;
+import org.eclipse.microprofile.metrics.annotation.Timed;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,6 +17,7 @@ public class HelloResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
+    @Timed(name = "helloTimer", unit = MetricUnits.MILLISECONDS)
     public String hello() {
         return service.greet();
     }
