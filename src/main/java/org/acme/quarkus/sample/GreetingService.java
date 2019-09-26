@@ -7,7 +7,7 @@ import java.util.Date;
 public class GreetingService {
 
     public String greet() {
-        return String.format("Hi there, date is %s", new Date());
+        return "Hi there, date is " + new Date();
     }
 
 }
