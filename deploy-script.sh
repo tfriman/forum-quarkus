@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. ./demo-magic/demo-magic.sh
+. ./demo-magic.sh
 
 clear
 
